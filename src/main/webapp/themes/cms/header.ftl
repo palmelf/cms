@@ -8,7 +8,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>师说CMS http://www.shishuo.com</title>
+    <title>武汉恒达智慧城市交通研发有限公司</title>
 
     <!-- Bootstrap core CSS -->
     <link href="${TEMPLATE_PATH}/css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,8 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                     	<li><a href="${basePath}/index.htm">首页</a></li>
-	                    <@shishuocms_folder_list fatherId="0" >
+                    	<#--头部页面tag显示-->
+	                    <@shishuocms_folder_list fatherId=0 >
 						<#list tag_folder_list as folder>
 	                        <@shishuocms_folder folderId="${folder.folderId}">
 								<li class="dropdown mega-menu-item">
@@ -73,7 +74,7 @@
 	                    	</li>
 							</@shishuocms_folder>
 						</#list>
-	                    </@shishuocms_folder_list>
+						</@shishuocms_folder_list>
                     </ul>
                 </div>
             </div>

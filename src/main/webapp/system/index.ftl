@@ -58,7 +58,7 @@
                               <a href="${basePath}/admin/folder/page.htm" title="前往目录列表"><i class="icon-folder-open"></i></a>
                           </div>
                           <div class="value">
-                              <h1>0</h1>
+                              <h1>${downloadCount}</h1>
                               <p>目录</p>
                           </div>
                       </section>

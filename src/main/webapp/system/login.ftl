@@ -8,7 +8,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>师说CMS 后台</title>
+    <title>${SYS_SITENAME}- 后台</title>
 
     <!-- Bootstrap core CSS -->
     <link href="${basePath}/system/css/bootstrap.min.css" rel="stylesheet">
@@ -56,8 +56,8 @@ input.error:focus {
       <form class="form-signin" id="adminForm" action="${basePath}/auth/admin/login.json"  autocomplete="off" method="post">
         <h2 class="form-signin-heading"><img src="${basePath}/system/images/logo.png" style="height:38px;"/></h2>
         <div class="login-wrap">
-            <input type="text" name="email" class="form-control" placeholder="邮箱" value="" autofocus>
-            <input type="password" name="password" class="form-control" placeholder="密码" value="">
+            <input type="text" name="email" class="form-control" placeholder="邮箱" value="cmstest@shishuo.com">
+            <input type="password" name="password" class="form-control" placeholder="密码" value="shishuocmstest">
             <div>
                 <input type="text" name="captcha" class="form-control" placeholder="验证码" style="width:100px;float:left;"> <img id="captcha" style="cursor:pointer;cursor:hand;margin-top: -13px;" onclick="this.src='${basePath}/auth/captcha.htm?'+Math.random();" src="${basePath}/auth/captcha.htm" >
             </div>
