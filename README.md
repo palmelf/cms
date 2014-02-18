@@ -117,4 +117,26 @@ PS：明年（过年以后）才会对系统统进行开源友好支持，敬请
 
 
   [1]: http://www.shishuo.com
-  
+------------------------------------------------------------------------------------------  
+##git常用操作
+. 添加远程分支
+git add remote shishuo git@git.oschina.net:shishuo/CMS.git
+
+. 获取更新
+git fetch shishuo
+
+. 切换到master分支
+git checkout master
+
+. 合并远程分支到当前分支
+git merge shishuo/master
+
+. 切换到develop分支
+git checkout develop
+
+. 将主分支master合并到develop分支,用于开发
+git merge develop
+
+. 撤销所有更新
+git reset --hards
+------------------------------------------------------------------------------------------
