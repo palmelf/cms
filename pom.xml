@@ -112,7 +112,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -183,6 +183,21 @@
 	<build>
 		<defaultGoal>compile</defaultGoal>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<additionalConfig>
+						<file>
+							<name>.settings/org.eclipse.core.resources.prefs</name>
+							<content>
+                        <![CDATA[eclipse.preferences.version=1${line.separator}encoding/<project>=UTF-8${line.separator}]]>
+							</content>
+						</file>
+					</additionalConfig>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -277,7 +292,8 @@
 							<value>UTF-8</value>
 						</systemProperty>
 					</systemProperties>
-					<jvmArgs>-Xmx512m -XX:PermSize=128m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8</jvmArgs>
+					<jvmArgs>-Xmx512m -XX:PermSize=128m -XX:MaxPermSize=256m
+						-Dfile.encoding=UTF-8</jvmArgs>
 				</configuration>
 				<executions>
 					<execution>
@@ -319,6 +335,7 @@
 		</resources>
 	</build>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<webapp.port>8080</webapp.port>
 		<webapp.stopPort>9090</webapp.stopPort>
 		<webapp.path>/</webapp.path>
