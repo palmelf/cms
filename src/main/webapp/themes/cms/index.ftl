@@ -68,7 +68,7 @@
                    <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400" data-thumb="">
                      <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
                      <img src="${TEMPLATE_PATH}/img/banner/3a.jpg" alt="">
-                        <div class="caption lfl slide_item_left" style="margin-top:5%; margin-left:32%"
+                        <div class="caption lfl slide_item_left" style="margin-top:5%; margin-left:29%"
                           data-x="10"
                           data-y="70"
                           data-speed="500"
