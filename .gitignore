@@ -1,4 +1,12 @@
 *.class
 .DS_Store
+# Eclipse project files
+.classpath
+/.classpath
+.project
+/.project
+.settings/
 /target
 /shishuocms.properties
+
+
