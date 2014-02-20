@@ -19,8 +19,10 @@
 								<#list tag_article_page.list as article>
 								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
 									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
-										  <a href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">
-											<img src="http://localhost:8080/byvision/upload/2014/02/13/1392260792329.jpg" alt="" style="width: 150px; height: 150px;">
+										  <a  href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">
+										  	<#list article.attachmentList as attachment>
+											<img src="${basePath}${attachment.path}" alt="" style="width: 150px; height: 150px;">
+											</#list>
 										</a> 
 										<h3>
 											<a style="white-space: nowrap;" href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">${article.name}</a><small></small>

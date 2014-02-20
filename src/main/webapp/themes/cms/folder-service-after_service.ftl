@@ -13,6 +13,7 @@
 					<div class="panel panel-default">   
 	                  	<div class="panel-heading"><h3 class="panel-title">${folder.name}<#if isAdmin><a target="_blank" style="color:red;" href="${basePath}/admin/folder/update.htm?folderId=${folder.folderId}">[编辑]</a></#if></h3></div>
 	                    <div class="panel-body">
+
 							<ul class="list-unstyled">
 								<@shishuocms_article_page folderId="${folder.folderId}" p="${p}"
 								rows="12"> <#list tag_article_page.list as article>
