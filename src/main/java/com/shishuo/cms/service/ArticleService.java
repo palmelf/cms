@@ -49,7 +49,7 @@ import com.shishuo.cms.exception.FolderNotFoundException;
  * 
  */
 @Service
-public class ArticleService {
+public class ArticleService  {
 
 	@Autowired
 	private ArticleDao articleDao;

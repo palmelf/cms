@@ -18,10 +18,13 @@
  */
 package com.shishuo.cms.action.admin;
 
+import java.util.Collection;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.stereotype.Controller;
 
 import com.shishuo.cms.constant.SystemConstant;
@@ -30,6 +33,7 @@ import com.shishuo.cms.entity.vo.JsonVo;
 import com.shishuo.cms.exception.ValidateException;
 import com.shishuo.cms.service.AdminService;
 import com.shishuo.cms.service.AttachmentService;
+import com.shishuo.cms.service.CacheService;
 import com.shishuo.cms.service.CommentService;
 import com.shishuo.cms.service.ConfigService;
 import com.shishuo.cms.service.ArticleService;
@@ -70,7 +74,8 @@ public class AdminBaseAction {
 	protected CommentService commentService;
 	@Autowired
 	protected UpdatePictureUtils updatePictureConsTant;
-
+	@Autowired
+	protected CacheService cacheService;
 	/**
 	 * 参数校验
 	 * 
@@ -98,4 +103,5 @@ public class AdminBaseAction {
 				SystemConstant.SESSION_ADMIN);
 		return admin;
 	}
+	
 }
