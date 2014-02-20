@@ -18,7 +18,7 @@
 								<@shishuocms_article_page folderId="${folder.folderId}" p="${p}"
 								rows="12"> <#list tag_article_page.list as article>
 								<li class="col-xs-3 space-mobile widfg"
-									style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;">
+									style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 120px; margin-bottom: 30px;">
 									<div class="thumbnail" style="border-right: 1px dashed #DDDDDD">
 										<#list article.attachmentList as attachment> <#if
 										attachment.type == "photo" && attachment.status="display"> <a

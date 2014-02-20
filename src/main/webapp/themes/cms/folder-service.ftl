@@ -17,12 +17,12 @@
 							<ul class="list-unstyled">
 								<@shishuocms_article_page folderId="${folder.folderId}" p="${p}"	rows="12">
 								<#list tag_article_page.list as article>
-								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
+								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 120px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
 									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
 										  <a  href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">
-										  	<#list article.attachmentList as attachment>
-											<img src="${basePath}${attachment.path}" alt="" style="width: 150px; height: 150px;">
-											</#list>
+										  <!--	<#list article.attachmentList as attachment>
+												<img src="${basePath}${attachment.path}" alt="" style="width: 150px; height: 150px;">
+											</#list>-->
 										</a> 
 										<h3>
 											<a style="white-space: nowrap;" href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">${article.name}</a><small></small>

@@ -21,7 +21,7 @@
 			                    <div class="col-lg-12">
 		                        	<div class="full-width-media-text">
 		                            	<h4><a href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">${article.name}</a><span>(${article.updateTime?date}) </span></h4>
-		                           		${article.content}
+		                          <!-- 		${article.content}-->
 		                        	</div>
                     		</div>
                     	</li>
