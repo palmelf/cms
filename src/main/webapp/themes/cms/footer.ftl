@@ -18,8 +18,10 @@
                 <div class="col-lg-3 col-sm-3 col-lg-offset-1" style="width:30%;margin-right:-10%">
                     <h1>友情链接</h1>
                     <ul class="social-link-footer list-unstyled">
-                        <li><a href="#"><i class="icon-renren"></i></a></li>
-                        <li><a href="#"><i class="icon-weibo"></i></a></li>
+                        <li><a href="http://www.moc.gov.cn" title="交通运输部"><i class="icon-sun"></i></a></li>
+                        <li><a href="http://www.most.gov.cn" title="科学技术部"><i class="icon-instagram"></i></a></li>
+                        <li><a href="http://www.miit.gov.cn" title="工信部"><i class="icon-tumblr"></i></a></li>
+                        <li><a href="http://www.rioh.cn" title="公路院"><i class="icon-skype"></i></a></li>
                     </ul>
                 </div>
             </div>
