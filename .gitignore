@@ -8,5 +8,5 @@
 .settings/
 /target
 /shishuocms.properties
-
-
+####  project
+/src/main/webapp/upload/*
