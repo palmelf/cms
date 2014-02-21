@@ -23,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,7 +44,9 @@ import com.shishuo.cms.entity.vo.JsonVo;
 @Controller
 @RequestMapping("/admin/config")
 public class AdminConfigAction extends AdminBaseAction {
-
+	
+	@Autowired
+	private SimpleCacheManager cacheManager;
 	/**
 	 * 网站配置
 	 * 
@@ -54,6 +58,22 @@ public class AdminConfigAction extends AdminBaseAction {
 		List<String> templateList = this.getTemplate();
 		modelMap.addAttribute("templateList", templateList);
 		return "system/config/basic";
+	}
+	
+	/**
+	 * 清除spring的cache;<BR>
+	 * 用于直接操作数据库后，前台页面不更新的问题;
+	 * @Author:       [jacarri]   
+	 */
+	@ResponseBody
+	@RequestMapping(value="/reload.json" , method = RequestMethod.POST)
+	public JsonVo<String> reload(@RequestParam(value="config",required =false) String config,@RequestParam(value="folder",required =false) String folder,
+			@RequestParam(value="article",required =false) String article,@RequestParam(value="attachment",required =false) String attachment,ModelMap modelMap){
+			List<String> cacheList = new ArrayList<String>();
+			JsonVo<String> json = new JsonVo<String>();
+			cacheService.cacheClear();
+			json.setResult(true);
+			return json;
 	}
 
 	/**

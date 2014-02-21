@@ -14,45 +14,19 @@
 	                  	<div class="panel-heading"><h4 class="panel-title">${folder.name}<#if isAdmin><a target="_blank" style="color:red;" href="${basePath}/admin/article/add.htm?folderId=${folder.folderId}">[增加文章]</a></#if></h4></div>
 	                    <div class="panel-body">
 	                    <ul>
+	                    	<@shishuocms_article_page folderId="${folder.folderId}" p="${p}"
+								rows="12">
+	                    	<#list tag_article_page.list as article>
 							<li>
-	                    <div class="col-lg-12">
-                        <div class="full-width-media-text">
-                            <h4><a href="http://localhost:8080/byvision/news/shishuo_news/4.htm">全球互联网“身份失窃”每年导致50亿美元损失</a><span>(2014-02-13) </span></h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, <a href="javascript:;">This is text link</a> Curabitur bibendum ornare dolor quis ullamcorper ligula sodales at....
-                            </p>
-                            <p>
-                                ---------------------------------------------------------------------------------------------------------------------------------------------
-                            </p>
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-	                    <div class="col-lg-12">
-                        <div class="full-width-media-text">
-                            <h4><a href="http://localhost:8080/byvision/news/shishuo_news/4.htm">全球互联网“身份失窃”每年导致50亿美元损失</a><span>(2014-02-13) </span></h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, <a href="javascript:;">This is text link</a> Curabitur bibendum ornare dolor quis ullamcorper ligula sodales at....
-                            </p>
-                            <p>
-                                ---------------------------------------------------------------------------------------------------------------------------------------------
-                            </p>
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-	                    <div class="col-lg-12">
-                        <div class="full-width-media-text">
-                            <h4><a href="http://localhost:8080/byvision/news/shishuo_news/4.htm">全球互联网“身份失窃”每年导致50亿美元损失</a><span>(2014-02-13) </span></h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, <a href="javascript:;">This is text link</a> Curabitur bibendum ornare dolor quis ullamcorper ligula sodales at....
-                            </p>
-                            <p>
-                                ---------------------------------------------------------------------------------------------------------------------------------------------
-                            </p>
-                        </div>
-                    </div>
-                    </li>
+			                    <div class="col-lg-12">
+		                        	<div class="full-width-media-text">
+		                            	<h4><a href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">${article.name}</a><span>(${article.updateTime?date}) </span></h4>
+		                          <!-- 		${article.content}-->
+		                        	</div>
+                    		</div>
+                    	</li>
+                    	</#list>
+                    	</@shishuocms_article_page>
                     </ul>
 						</div>
 					</div>

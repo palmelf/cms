@@ -4,23 +4,24 @@
                 <div class="col-lg-3 col-sm-3">
                     <h1>联系方式</h1>
                     <address>
-                        <p>地址:湖南省长沙市建湘路479号曼哈顿大夏</p>
-                        <p>传真 : 0731-89601598</p>
-                        <p>邮箱 : <a href="javascript:;">support@shishuo.com</a></p>
+                        <p>地址:湖北省武汉市东西湖区金银湖路财富大厦11楼</p>
+                        <p>电话：027-68853590  传真 : 027-68853550</p>
                     </address>
                 </div>
-                <div class="col-lg-5 col-sm-5">
+                <div class="col-lg-5 col-sm-5" style="margin-left:3%; width:39%">
                     <h1>最近的动态</h1>
                     <div class="tweet-box">
                         <i class="icon-twitter"></i>
-                        <em>请关注<a href="javascript:;">http://www.shishuo.com</a> 了解我们最新的动态</em>
+                        <em>请关注<a href="javascript:;">http://www.chuyejt.com/</a> 了解我们最新的动态</em>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-3 col-lg-offset-1">
+                <div class="col-lg-3 col-sm-3 col-lg-offset-1" style="width:30%;margin-right:-10%">
                     <h1>友情链接</h1>
                     <ul class="social-link-footer list-unstyled">
-                        <li><a href="#"><i class="icon-renren"></i></a></li>
-                        <li><a href="#"><i class="icon-weibo"></i></a></li>
+                        <li><a href="http://www.moc.gov.cn" title="交通运输部"><i class="icon-sun"></i></a></li>
+                        <li><a href="http://www.most.gov.cn" title="科学技术部"><i class="icon-instagram"></i></a></li>
+                        <li><a href="http://www.miit.gov.cn" title="工信部"><i class="icon-tumblr"></i></a></li>
+                        <li><a href="http://www.rioh.cn" title="公路院"><i class="icon-skype"></i></a></li>
                     </ul>
                 </div>
             </div>

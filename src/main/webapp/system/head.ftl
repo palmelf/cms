@@ -23,6 +23,7 @@
 <link href="${basePath}/system/assets/ueditor1/third-party/SyntaxHighlighter/shCoreDefault.css" rel="stylesheet" />	
 <!-- Custom styles for this template -->
 <link href="${basePath}/system/css/style.css" rel="stylesheet">
+<link href="${basePath}/system/css/cikonss.css" rel="stylesheet">
 <link href="${basePath}/system/css/style-responsive.css" rel="stylesheet" />
 <link href="${basePath}/system/assets/uploadify/uploadify.css" rel="stylesheet" />
 
@@ -36,8 +37,27 @@
 		window.ContextPath = "${contextPath}";
 		kindId = 0;
 		kind = "article";
+		
 	</script>
 <script src="${basePath}/system/js/jquery.js"></script>
+
+<script type="text/javascript">
+		$(function(){
+ 			 $("#cleanCache").click(function(){
+  				$.ajax({
+  				dataType : 'json',
+				url:"${basePath}/admin/config/reload.json",
+				type : "post",
+				success : function(data) {
+					if (data.result) {
+						bootbox.alert("缓存清理成功", function() {
+							window.location.reload();
+						});					
+					}
+				}
+			});
+  		});
+</script>
 </head>
 <body>
 	<section id="container" class="">
@@ -54,6 +74,7 @@
 			<div class="top-nav ">
 
 				<ul class="nav pull-right top-menu">
+				<span class="icon icon-mid" title="SQL脚本更新数据库后，点此清除缓存" id="cleanCache"><span class="icon-list-view"></span></span>
                   <!-- user login dropdown start-->
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -94,7 +115,7 @@
 						<a href="${basePath}/admin/comment/page.htm?status=hidden" <#if menu="comment">class="active"</#if>> <i class="icon-comments"></i> <span>评论</span></a>
 					</li>									
 					<li class="sub-menu">
-						<a href="javascript:;" <#if menu="sdgb">class="active"</#if>> <i class="icon-desktop"></i> <span>主题</span></a>
+						<a href="javascript:;" <#if menu="sdgb">class="active"</#if>> <i class="icon-desktops"></i> <span>主题</span></a>
 						<ul class="sub">
 						</ul>
 					</li>

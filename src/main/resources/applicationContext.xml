@@ -33,7 +33,7 @@
 
 	<task:annotation-driven />
 	
-	<cache:annotation-driven/>
+	<cache:annotation-driven cache-manager="cacheManager"/>
 
 	<!-- spring mvc 基于注解在方法上 控制映射 配置 -->
 	<bean

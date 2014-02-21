@@ -15,81 +15,27 @@
 	                    <div class="panel-body">
 						<div class="row front-team" style="margin: 0;">
 							<ul class="list-unstyled">
-								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
+								<@shishuocms_article_page folderId="${folder.folderId}" p="${p}"	rows="12">
+								<#list tag_article_page.list as article>
+								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 120px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
 									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
-										  <a href="http://localhost:8080/byvision/service/data_download/2.htm">
-											<img src="http://localhost:8080/byvision/upload/2014/02/13/1392260792329.jpg" alt="" style="width: 150px; height: 150px;">
+										  <a  href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">
+										  <!--	<#list article.attachmentList as attachment>
+												<img src="${basePath}${attachment.path}" alt="" style="width: 150px; height: 150px;">
+											</#list>-->
 										</a> 
 										<h3>
-											<a style="white-space: nowrap;" href="http://localhost:8080/byvision/service/data_download/2.htm">师说CMS</a> <small></small>
+											<a style="white-space: nowrap;" href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm">${article.name}</a><small></small>
 										</h3>
 										<div>
-											<a href="http://localhost:8080/byvision/service/data_download/2.htm" class="btn btn-primary">Detail
+											<a href="${basePath}/<#list article.folderPathList as folder>${folder.ename}/</#list>${article.articleId}.htm"class="btn btn-primary">Detail
 												<i class="fa fa-search"></i>
 											</a>
 										</div>
 									</div>
 								</li>
-								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
-									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
-										  <a href="http://localhost:8080/byvision/service/data_download/2.htm">
-											<img src="http://localhost:8080/byvision/upload/2014/02/13/1392260792329.jpg" alt="" style="width: 150px; height: 150px;">
-										</a> 
-										<h3>
-											<a style="white-space: nowrap;" href="http://localhost:8080/byvision/service/data_download/2.htm">师说CMS</a> <small></small>
-										</h3>
-										<div>
-											<a href="http://localhost:8080/byvision/service/data_download/2.htm" class="btn btn-primary">Detail
-												<i class="fa fa-search"></i>
-											</a>
-										</div>
-									</div>
-								</li>
-								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
-									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
-										  <a href="http://localhost:8080/byvision/service/data_download/2.htm">
-											<img src="http://localhost:8080/byvision/upload/2014/02/13/1392260792329.jpg" alt="" style="width: 150px; height: 150px;">
-										</a> 
-										<h3>
-											<a style="white-space: nowrap;" href="http://localhost:8080/byvision/service/data_download/2.htm">师说CMS</a> <small></small>
-										</h3>
-										<div>
-											<a href="http://localhost:8080/byvision/service/data_download/2.htm" class="btn btn-primary">Detail
-												<i class="fa fa-search"></i>
-											</a>
-										</div>
-									</div>
-								</li>
-								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
-									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
-										  <a href="http://localhost:8080/byvision/service/data_download/2.htm">
-											<img src="http://localhost:8080/byvision/upload/2014/02/13/1392260792329.jpg" alt="" style="width: 150px; height: 150px;">
-										</a> 
-										<h3>
-											<a style="white-space: nowrap;" href="http://localhost:8080/byvision/service/data_download/2.htm">师说CMS</a> <small></small>
-										</h3>
-										<div>
-											<a href="http://localhost:8080/byvision/service/data_download/2.htm" class="btn btn-primary">Detail
-												<i class="fa fa-search"></i>
-											</a>
-										</div>
-									</div>
-								</li>
-								<li style="width: 33%; text-align: center; border-bottom: 1px solid #DDDDDD; height: 300px; margin-bottom: 30px;" class="col-xs-3 space-mobile widfg">
-									<div style="border-right: 1px dashed #DDDDDD" class="thumbnail">
-										  <a href="http://localhost:8080/byvision/service/data_download/2.htm">
-											<img src="http://localhost:8080/byvision/upload/2014/02/13/1392260792329.jpg" alt="" style="width: 150px; height: 150px;">
-										</a> 
-										<h3>
-											<a style="white-space: nowrap;" href="http://localhost:8080/byvision/service/data_download/2.htm">师说CMS</a> <small></small>
-										</h3>
-										<div>
-											<a href="http://localhost:8080/byvision/service/data_download/2.htm" class="btn btn-primary">Detail
-												<i class="fa fa-search"></i>
-											</a>
-										</div>
-									</div>
-								</li>
+								</#list>
+								</@shishuocms_article_page>
 							</ul>
 						</div>
 					</div>
