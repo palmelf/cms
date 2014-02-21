@@ -42,12 +42,8 @@
 <script src="${basePath}/system/js/jquery.js"></script>
 
 <script type="text/javascript">
-			function cache(){
-			
-		}
-		
 		$(function(){
- 			 $("#cache").click(function(){
+ 			 $("#cleanCache").click(function(){
   				$.ajax({
   				dataType : 'json',
 				url:"${basePath}/admin/config/reload.json",
@@ -57,11 +53,10 @@
 						bootbox.alert("缓存清理成功", function() {
 							window.location.reload();
 						});					
-				}
+					}
 				}
 			});
-  });
-});
+  		});
 </script>
 </head>
 <body>
@@ -79,7 +74,7 @@
 			<div class="top-nav ">
 
 				<ul class="nav pull-right top-menu">
-				<span class="icon icon-mid" title="清除缓存" id="cache"><span class="icon-list-view"></span></span>
+				<span class="icon icon-mid" title="SQL脚本更新数据库后，点此清除缓存" id="cleanCache"><span class="icon-list-view"></span></span>
                   <!-- user login dropdown start-->
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">

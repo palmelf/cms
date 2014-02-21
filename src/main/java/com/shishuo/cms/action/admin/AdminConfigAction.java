@@ -60,6 +60,11 @@ public class AdminConfigAction extends AdminBaseAction {
 		return "system/config/basic";
 	}
 	
+	/**
+	 * 清除spring的cache;<BR>
+	 * 用于直接操作数据库后，前台页面不更新的问题;
+	 * @Author:       [jacarri]   
+	 */
 	@ResponseBody
 	@RequestMapping(value="/reload.json" , method = RequestMethod.POST)
 	public JsonVo<String> reload(@RequestParam(value="config",required =false) String config,@RequestParam(value="folder",required =false) String folder,
