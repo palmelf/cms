@@ -1,5 +1,7 @@
 *.class
 .DS_Store
+.orig
+.bin
 # Eclipse project files
 .classpath
 .project
