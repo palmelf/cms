@@ -179,7 +179,8 @@ public class PageVo<T> {
 					+ "' title='末页'>&gt;&gt;</a></li>");
 		}
 		sb.append("</ul>");
-		return sb.toString();
+		this.pageNumHtml = sb.toString();
+		return pageNumHtml;
 	}
 
 	public int getCount() {

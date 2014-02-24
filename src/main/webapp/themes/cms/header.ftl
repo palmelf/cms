@@ -8,7 +8,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>武汉恒达智慧城市交通研发有限公司</title>
+    <title>${SYS_SITENAME}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="${TEMPLATE_PATH}/css/bootstrap.min.css" rel="stylesheet">

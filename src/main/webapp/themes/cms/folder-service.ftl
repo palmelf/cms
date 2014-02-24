@@ -38,6 +38,7 @@
 								</@shishuocms_article_page>
 							</ul>
 						</div>
+						${tag_article_page.pageNumHtml}
 					</div>
 					</div>
 				</div>

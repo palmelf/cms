@@ -913,9 +913,9 @@ ul.about-flex-slides {
 }
 
 .breadcrumbs {
-    background: #475268;
+    background: url("../img/middle.jpg");
     color: #fff;
-    padding: 45px 0;
+    padding: 50px 0;
     margin-bottom: 40px;
 }
 

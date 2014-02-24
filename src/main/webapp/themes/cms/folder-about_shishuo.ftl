@@ -20,6 +20,7 @@
 								</#list>
 								</@shishuocms_article_page>
 						</div>
+							${tag_article_page.pageNumHtml}
 					</div>
 				</div>
 				<!-- END LEFT SIDEBAR -->

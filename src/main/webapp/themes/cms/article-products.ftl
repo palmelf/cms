@@ -83,7 +83,7 @@
 					<div class="row">
 						<div class="col-md-12 col-sm-12" style="height:150px;">
 						<ul class="folder-products"  style="display: block;">
-						<@shishuocms_article_page folderId="${article.folderId}" p="1" rows="12">
+						<@shishuocms_article_page folderId="${article.folderId}" p="${p}" rows="12">
 						<#list tag_article_page.list as article>
 							<#list article.attachmentList as attachment>
 								<#if attachment.type == "photo" && attachment.status="display">
@@ -99,6 +99,7 @@
 						</@shishuocms_article_page>
 						</ul>
 						</div>
+						${tag_article_page.pageNumHtml}
 					</div>
 				</div>
 				</div>

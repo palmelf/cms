@@ -2,7 +2,7 @@
 	<div class="breadcrumbs">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-sm-4">
+			<!--	<div class="col-lg-4 col-sm-4">
 					<h1>${folder.name}</h1>
 				</div>
 				<div class="col-lg-8 col-sm-8">
@@ -19,7 +19,8 @@
 							</#if>
 						</#list>
 					</ol>
-				</div>
+				</div>-->
+				
 			</div>
 		</div>
 	</div>
