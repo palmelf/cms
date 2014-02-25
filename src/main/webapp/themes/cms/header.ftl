@@ -20,7 +20,7 @@
     <link href="${TEMPLATE_PATH}/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
     <link href="${TEMPLATE_PATH}/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
     <script src="${TEMPLATE_PATH}/js/jquery.js"></script>    
-
+    <script src="${TEMPLATE_PATH}/js/respond.js"></script>    
     <link rel="stylesheet" href="${TEMPLATE_PATH}/assets/revolution_slider/css/rs-style.css" media="screen">
     <link rel="stylesheet" href="${TEMPLATE_PATH}/assets/revolution_slider/rs-plugin/css/settings.css" media="screen">
 
@@ -40,13 +40,15 @@
 	    padding: 0 5px;
 	}
     </style>
+    
+    
   </head>
   <body>
   	<header class="header-frontend">
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -69,7 +71,6 @@
 	                        		<#list tag_folder.folderList as secondFolder>
 	                        		<li><a href="${basePath}/${tag_folder.ename}/${secondFolder.ename}/index.htm">${secondFolder.name}</a></li>
 	                        		</#list>
-	                        	
 	                        	</ul>
 	                    	</li>
 							</@shishuocms_folder>
