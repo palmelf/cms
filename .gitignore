@@ -9,4 +9,4 @@
 /target
 /shishuocms.properties
 ####  project
-/src/main/webapp/upload/*
+#/src/main/webapp/upload/*
