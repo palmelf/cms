@@ -1,12 +1,14 @@
 *.class
 .DS_Store
+.orig
+.bin
 # Eclipse project files
 .classpath
-/.classpath
 .project
-/.project
-.settings/
+.settings
+# maven temp directory
 /target
-/shishuocms.properties
 ####  project
 #/src/main/webapp/upload/*
+/shishuocms.properties
+
