@@ -21,6 +21,7 @@ package com.shishuo.cms.entity;
 import java.util.Date;
 
 import com.shishuo.cms.constant.LogConstant;
+import com.shishuo.cms.constant.TransResultEnum;
 
 /**
  * 日志实体
@@ -40,6 +41,8 @@ public class Log {
 	 * 描述
 	 */
 	private String content;
+	
+	private String description;
 
 	/**
 	 * 日志等级：DEBUG INFO WARN ERROR FATAL
@@ -49,6 +52,15 @@ public class Log {
 	 * 时间
 	 */
 	private Date createTime;
+	private TransResultEnum transType;
+
+	public TransResultEnum getTransType() {
+		return transType;
+	}
+
+	public void setTransType(TransResultEnum transType) {
+		this.transType = transType;
+	}
 
 	public long getLogId() {
 		return logId;
@@ -81,4 +93,13 @@ public class Log {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 }

@@ -25,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.shishuo.cms.constant.LogConstant;
+import com.shishuo.cms.constant.TransResultEnum;
 import com.shishuo.cms.dao.LogDao;
 import com.shishuo.cms.entity.Log;
 import com.shishuo.cms.entity.vo.PageVo;
@@ -49,11 +50,13 @@ public class LogService {
 	 * @param description
 	 * @return log
 	 */
-	public Log addLog(LogConstant.Level level, String content) {
+	public Log addLog(LogConstant.Level level, String description) {
 		Log log = new Log();
 		log.setLevel(level);
-		log.setContent(content);
+		//log.setContent(content);
+		log.setDescription(description);
 		log.setCreateTime(new Date());
+		log.setTransType(TransResultEnum.TRANS_RESULT_FAIL);
 		logDao.addLog(log);
 		return log;
 	}

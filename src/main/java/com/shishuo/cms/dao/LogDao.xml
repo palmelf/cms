@@ -27,8 +27,8 @@
 		
 	<insert id="addLog" parameterType="com.shishuo.cms.entity.Log">
 		insert into
-		log(description,createTime)
-		value(#{description},#{createTime})
+		log(description,createTime,transType)
+		value(#{description},#{createTime},#{transType})
 		<selectKey resultType="long" keyProperty="logId">
 			SELECT LAST_INSERT_ID()
 		</selectKey>

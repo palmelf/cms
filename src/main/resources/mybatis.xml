@@ -20,6 +20,9 @@
 		<typeAlias alias="Map" type="java.util.Map" />
 		<typeAlias alias="List" type="java.util.List" />
 	</typeAliases>
+	<typeHandlers>
+		<typeHandler handler="com.shishuo.cms.mybatis.EnumValueTypeHandler" javaType="com.shishuo.cms.constant.TransResultEnum"/>
+	</typeHandlers>
 	<plugins>
 		<plugin interceptor="org.apache.ibatis.executor.resultset.DiclectResultSetHandlerInterceptor" />
 	</plugins>
