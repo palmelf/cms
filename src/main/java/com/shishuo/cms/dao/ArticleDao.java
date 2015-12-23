@@ -176,4 +176,5 @@ public interface ArticleDao {
 			@Param("thirdFolderId") long thirdFolderId,
 			@Param("fourthFolderId") long fourthFolderId);
 
+	public List<Article> selectListByQuery();
 }

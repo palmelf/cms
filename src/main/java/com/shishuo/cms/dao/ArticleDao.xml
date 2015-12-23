@@ -8,7 +8,29 @@
 	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
 	the specific language governing permissions and limitations under the License. -->
 <mapper namespace="com.shishuo.cms.dao.ArticleDao">
-
+  <resultMap id="BaseResultMap" type="com.shishuo.cms.entity.Article" >
+    <id column="articleId" property="articleId" jdbcType="BIGINT" />
+    <id column="thirdFolderId" property="thirdFolderId" jdbcType="BIGINT" />
+    <id column="fourthFolderId" property="fourthFolderId" jdbcType="BIGINT" />
+    <id column="secondFolderId" property="secondFolderId" jdbcType="BIGINT" />
+    <result column="firstFolderId" property="firstFolderId" jdbcType="BIGINT" />
+    <result column="adminId" property="adminId" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="realPrice" property="realPrice" jdbcType="DECIMAL" />
+    <result column="copyCount" property="copyCount" jdbcType="INTEGER" />
+    <result column="viewCount" property="viewCount" jdbcType="INTEGER" />
+    <result column="commentCount" property="commentCount" jdbcType="INTEGER" />
+    <result column="owner" property="owner" jdbcType="VARCHAR" />
+  </resultMap>
+  
+    <sql id="Base_Column_List" >
+    articleId, thirdFolderId, fourthFolderId, secondFolderId, firstFolderId, adminId, 
+    name, title, price, realPrice, copyCount, viewCount, commentCount, owner, type, status, 
+    createTime, updateTime, expireTime
+  </sql>
+  
 	<!-- ############################## -->
 	<!-- ###### 增加 ###### -->
 	<!-- ############################## -->
@@ -137,4 +159,11 @@
 		<if test="thirdFolderId!=0">and thirdFolderId=#{thirdFolderId}</if>
 		<if test="fourthFolderId!=0"> and fourthFolderId=#{fourthFolderId}</if>
 	</select>
+<!-- 	       <include refid="Base_Column_List" /> -->
+   <select id="selectListByQuery" resultType="com.shishuo.cms.entity.Article">
+<!--    <select id="selectListByQuery" resultMap="BaseResultMap"> -->
+		select 
+			at.*,ad.name as adminName$Desc
+	 	  from article at , admin ad where at.adminId =ad.adminId
+	   </select>
 </mapper>  

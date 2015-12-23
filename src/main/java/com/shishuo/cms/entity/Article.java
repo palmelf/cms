@@ -21,6 +21,8 @@ package com.shishuo.cms.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import lombok.Data;
+
 import com.shishuo.cms.constant.ArticleConstant;
 
 /**
@@ -29,7 +31,7 @@ import com.shishuo.cms.constant.ArticleConstant;
  * @author zsy
  * 
  */
-
+//@Data
 public class Article {
 
 	/**
@@ -304,5 +306,23 @@ public class Article {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	private String adminName;
 
+	@Override
+	public String toString() {
+		return "Article [articleId=" + articleId + ", firstFolderId="
+				+ firstFolderId + ", secondFolderId=" + secondFolderId
+				+ ", thirdFolderId=" + thirdFolderId + ", fourthFolderId="
+				+ fourthFolderId + ", adminId=" + adminId + ", ename=" + ename
+				+ ", name=" + name + ", title=" + title + ", content="
+				+ content + ", description=" + description + ", price=" + price
+				+ ", realPrice=" + realPrice + ", copyCount=" + copyCount
+				+ ", viewCount=" + viewCount + ", commentCount=" + commentCount
+				+ ", status=" + status + ", owner=" + owner + ", createTime="
+				+ createTime + ", updateTime=" + updateTime + ", expireTime="
+				+ expireTime + ", adminName=" + adminName + "]";
+	}
+	
+	
 }

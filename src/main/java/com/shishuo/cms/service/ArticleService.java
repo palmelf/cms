@@ -410,5 +410,9 @@ public class ArticleService  {
 		return articleDao.getArticleCountByStatus(firstFolderId,
 				secondFolderId, thirdFolderId, fourthFolderId, status);
 	}
-
+	
+	public List findListPageByQuery(){
+		return articleDao.selectListByQuery();
+	}
+	
 }
